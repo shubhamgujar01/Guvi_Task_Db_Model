@@ -1,0 +1,58 @@
+db.createCollection("users");
+db.createCollection("codekata");
+db.createCollection("attendance");
+db.createCollection("topics");
+db.createCollection("tasks");
+db.createCollection("company_drives");
+db.createCollection("mentors");
+
+// Example: Inserting a document into the 'users' collection
+db.users.insertOne({
+  name: "John Doe",
+  email: "john@example.com",
+  role: "student",
+  tasksCompleted: ["taskID1", "taskID2"],
+  attendance: ["attendanceID1", "attendanceID2"],
+});
+
+// Insert documents into other collections following their respective structures and fields.
+// Inserting a document into the 'codekata' collection
+db.codekata.insertOne({
+  userId: "userID123",
+  problemsSolved: 10,
+});
+
+// Inserting a document into the 'attendance' collection
+db.attendance.insertOne({
+  userId: "userID123",
+  date: new Date("2023-10-20"),
+  present: true,
+});
+
+// Inserting a document into the 'topics' collection
+db.topics.insertOne({
+  topicName: "MongoDB",
+  month: "October",
+  taskIds: ["taskID3", "taskID4"],
+});
+
+// Inserting a document into the 'tasks' collection
+db.tasks.insertOne({
+  taskId: "taskID3",
+  taskName: "Data Modeling",
+  month: "October",
+  submissionDate: new Date("2023-10-25"),
+});
+
+// Inserting a document into the 'company_drives' collection
+db.company_drives.insertOne({
+  driveName: "TechFest",
+  date: new Date("2023-10-28"),
+});
+
+// Inserting a document into the 'mentors' collection
+db.mentors.insertOne({
+  name: "Mentor Name",
+  menteesCount: 20,
+  menteeIds: ["userID123", "userID456"],
+});
